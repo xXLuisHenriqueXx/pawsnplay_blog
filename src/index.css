@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-info: var(--info);
+  --color-error: var(--error);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-heading: var(--font-sans);
+  --font-sans: "Geist Variable", sans-serif;
+
+  --background-image-hero: url("./assets/hero/background_homepage.png");
+}
+
+:root {
+  --radius: 0.625rem;
+
+  --background: #f2f2f2;
+  --card: #f4f4f4;
+  --foreground: #101828;
+  --foreground-secondary: #233250;
+  --info: #5284e9;
+  --error: #a52525;
+  --border: #e5e5e5;
+  --primary: #171717;
+  --secondary: #f5f5f5;
+  --input: #e5e5e5;
+  --ring: #a1a1a1;
+}
+
+@layer base {
+  * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
