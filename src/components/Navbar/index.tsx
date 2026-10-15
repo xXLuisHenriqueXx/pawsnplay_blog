@@ -32,7 +32,7 @@ const Navbar = () => {
         <Button
           className="md:hidden"
           variant="secondary"
-          size="icon-md"
+          size="icon"
           onClick={() => setShowModal(!showModal)}
           aria-label={showModal ? "Close menu" : "Open menu"}
           aria-expanded={showModal}

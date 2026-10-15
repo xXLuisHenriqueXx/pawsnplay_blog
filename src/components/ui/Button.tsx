@@ -19,10 +19,7 @@ const buttonVariants = cva(
       },
       size: {
         default: "h-12 px-4",
-        "icon-sm": "size-8",
-        "icon-md": "size-10",
-        "icon-lg": "size-12 [&_svg]:size-6",
-        "icon-xl": "size-14 [&_svg]:size-6",
+        icon: "size-12",
       },
     },
     defaultVariants: {
@@ -33,12 +30,7 @@ const buttonVariants = cva(
 );
 
 export type ButtonVariants = "default" | "secondary" | "outline" | "ghost";
-export type ButtonSizes =
-  | "default"
-  | "icon-sm"
-  | "icon-md"
-  | "icon-lg"
-  | "icon-xl";
+export type ButtonSizes = "default" | "icon";
 
 type Props = ButtonPrimitive.Props & {
   variant?: ButtonVariants;
