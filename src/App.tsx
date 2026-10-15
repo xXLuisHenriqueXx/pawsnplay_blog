@@ -5,7 +5,6 @@ import Services from "./components/Services";
 import Shop from "./components/Shop";
 import Blog from "./components/Blog";
 import Team from "./components/Team";
-import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
       <Blog />
       <Team />
       <Contact />
-      <Footer />
     </main>
   );
 }
