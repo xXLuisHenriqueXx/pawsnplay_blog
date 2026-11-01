@@ -1,73 +1,103 @@
-# React + TypeScript + Vite
+# Paws n' Play
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div style="display: inline_block">
+  <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/react/default.svg" alt="React" width="24" height="24" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/typescript/default.svg" alt="TypeScript" width="24" height="24" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/vite/default.svg" alt="Vite" width="24" height="24" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/tailwind-css/default.svg" alt="Tailwind CSS" width="24" height="24" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/lucide/default.svg" alt="Lucide" width="24" height="24" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/shadcn-ui/default.svg" alt="shadcn/ui" width="24" height="24" />
+</div>
+<br />
 
-Currently, two official plugins are available:
+**A modern and engaging pet care website designed to bring pet products, services, and useful information together in one place.**
+Paws n' Play is a responsive web application focused on presenting a pet care brand through an intuitive and visually appealing interface. It brings together information about products, services, the team, and pet-related content, providing visitors with a centralized experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+### Website Sections
+The application is organized into dedicated sections to provide a complete overview of the brand:
+- **Hero** — Main presentation section with a prominent call to action.
+- **Shop** — Product showcase for pet-related items.
+- **Services** — Overview of available pet care services.
+- **About** — Brand information and its purpose.
+- **Blog** — Pet-related articles and informational content.
+- **Team** — Presentation of the people behind the brand.
+- **Contact** — Contact information and communication section.
 
-## React Compiler
+### User Experience
+- Responsive layout for different screen sizes.
+- Component-based architecture.
+- Consistent visual identity and typography.
+- Smooth animations and interactive UI elements.
+- Accessible and reusable interface components.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Getting Started
+### Installation
+Clone the repository:
+```bash
+git clone https://github.com/xXLuisHenriqueXx/pawsnplay_blog.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Navigate to the project directory:
+```bash
+cd pawsnplay_blog
 ```
+
+Install dependencies:
+```bash
+yarn install
+```
+
+### Development
+Start the development server:
+
+```bash
+yarn dev
+```
+Vite will display the local development URL in the terminal.
+
+## Available Scripts
+| Command | Description |
+|---|---|
+| `yarn dev` | Starts the development server |
+| `yarn build` | Runs TypeScript checks and generates the production build |
+| `yarn preview` | Previews the production build |
+| `yarn lint` | Runs ESLint |
+
+## Project Structure
+The application follows a component-based architecture, separating the main application entry point from individual website sections and shared assets.
+```text
+pawsnplay_blog/
+├── .github/
+│   └── workflows/       # GitHub Actions workflows
+├── public/              # Static assets
+├── src/
+│   ├── components/      # Website sections and UI components
+│   ├── App.tsx          # Main application component
+│   ├── main.tsx         # Application entry point
+│   └── index.css        # Global styles
+├── .gitignore
+├── components.json      # UI component configuration
+├── eslint.config.js     # ESLint configuration
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+```
+
+## Contributing
+Contributions, suggestions, and bug reports are welcome.
+1. Fork the repository.
+2. Create a feature branch.
+3. Implement your changes.
+4. Submit a pull request describing the changes.
+Please keep contributions consistent with the existing TypeScript conventions and component architecture.
+
+## Disclaimer
+Paws n' Play is an independent project and is not affiliated with any specific pet care brand or organization.
