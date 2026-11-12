@@ -37,6 +37,7 @@ const Modal = ({ isOpen, onClose, items }: Props) => {
               <Button
                 className="w-full px-16 text-info"
                 variant="ghost"
+                aria-label={`Navigate to ${text}`}
                 onClick={() => {
                   action();
                   onClose();

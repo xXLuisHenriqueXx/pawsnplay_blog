@@ -7,7 +7,7 @@ const About = () => {
   const { title, paragraphs, image } = ABOUT_CONTENT;
 
   return (
-    <Section id="about" className="max-w-7xl mx-auto">
+    <Section id="about" aria-label="About Us" className="max-w-7xl mx-auto">
       <Header title={title} />
 
       <div className="flex flex-row gap-x-4 items-center">
@@ -22,7 +22,11 @@ const About = () => {
         <img
           className="hidden xl:block flex-1 max-w-xl object-cover -z-1"
           src={image}
-          alt="About"
+          alt="Cats resting together at Paws n' Play"
+          width={1000}
+          height={1168}
+          loading="lazy"
+          decoding="async"
         />
       </div>
     </Section>

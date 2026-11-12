@@ -44,9 +44,13 @@ const ServiceCard = ({ data, className }: Props) => {
         className="absolute inset-0 h-full w-full object-cover -z-1"
         src={data.image}
         alt={data.name}
+        width={800}
+        height={800}
+        loading="lazy"
+        decoding="async"
       />
 
-      <h4 className="text-3xl font-bold">{data.name}</h4>
+      <h3 className="text-3xl font-bold">{data.name}</h3>
 
       <div
         className={cn(
@@ -55,13 +59,14 @@ const ServiceCard = ({ data, className }: Props) => {
         )}
       >
         <div>
-          <h4 className="text-3xl font-bold">{data.name}</h4>
+          <p className="text-3xl font-bold">{data.name}</p>
           <p className="max-w-xl">{data.description}</p>
         </div>
 
         <Button
           className="w-full max-w-sm"
           onClick={(e) => e.stopPropagation()}
+          aria-label={`Learn more about ${data.name}`}
         >
           <BadgeInfo /> Learn More
         </Button>

@@ -10,8 +10,14 @@ const UserActions = ({ items }: Props) => {
   return (
     <div className="flex flex-row items-center gap-x-2 w-full max-w-2xl">
       {items.map(({ id, label, icon: Icon, variant, action }) => (
-        <Button key={id} className="flex-1" variant={variant} onClick={action}>
-          <Icon /> {label}
+        <Button
+          key={id}
+          className="flex-1"
+          variant={variant}
+          onClick={action}
+          aria-label={label}
+        >
+          <Icon aria-hidden="true" /> {label}
         </Button>
       ))}
     </div>

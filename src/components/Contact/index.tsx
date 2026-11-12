@@ -32,7 +32,8 @@ const Contact = () => {
 
   return (
     <Section
-      id="hero"
+      id="contact"
+      aria-label="Contact"
       className="gap-y-16 xl:px-36 bg-foreground text-background"
     >
       <Header
@@ -44,9 +45,9 @@ const Contact = () => {
         <ul className="grid grid-cols-2 gap-8">
           {CONTACTS.map((contact) => (
             <li key={contact.id} className="flex flex-col gap-y-2">
-              <contact.icon className="size-6" />
+              <contact.icon className="size-6" aria-hidden="true" />
               <div>
-                <h4 className="font-semibold">{contact.name}</h4>
+                <h3 className="font-semibold">{contact.name}</h3>
                 <p className="text-sm text-background/75">
                   {contact.description}
                 </p>
@@ -60,9 +61,9 @@ const Contact = () => {
         <Card className="p-8 text-foreground">
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <FieldGroup>
-              <h2 className="text-3xl font-extrabold text-foreground">
+              <h3 className="text-3xl font-extrabold text-foreground">
                 Let's talk
-              </h2>
+              </h3>
 
               <Controller
                 name="name"
@@ -77,7 +78,7 @@ const Contact = () => {
                       id="name"
                       aria-invalid={fieldState.invalid}
                       placeholder="Your name ..."
-                      autoComplete="off"
+                      autoComplete="name"
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />
@@ -97,9 +98,10 @@ const Contact = () => {
                     <Input
                       {...field}
                       id="email"
+                      type="email"
                       aria-invalid={fieldState.invalid}
                       placeholder="Your email ..."
-                      autoComplete="off"
+                      autoComplete="email"
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />

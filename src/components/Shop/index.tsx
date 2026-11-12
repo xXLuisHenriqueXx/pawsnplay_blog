@@ -30,9 +30,10 @@ const Shop = () => {
   }, [products, search, activeFilter]);
 
   return (
-    <Section id="shop" className="max-w-7xl mx-auto">
+    <Section id="shop" aria-label="Shop" className="max-w-7xl mx-auto">
+      <h2 className="sr-only">Shop</h2>
       <div className="flex flex-row items-center gap-x-1 w-full max-w-xl mx-auto border border-border focus-within:border-foreground rounded-2xl overflow-hidden transition-colors duration-300">
-        <div className="flex items-center justify-center w-16 h-12 bg-foreground text-background">
+        <div className="flex items-center justify-center w-16 h-12 bg-foreground text-background" aria-hidden="true">
           <Search className="size-4" />
         </div>
 
@@ -40,6 +41,7 @@ const Shop = () => {
           className="border-0"
           type="search"
           placeholder="Search ..."
+          aria-label="Search products"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />

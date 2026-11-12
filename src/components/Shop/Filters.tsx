@@ -20,6 +20,8 @@ const Filters = ({ items, active, setActive }: Props) => {
               active === id && "bg-foreground text-background",
             )}
             onClick={() => setActive(id)}
+            aria-pressed={active === id}
+            aria-label={`Filter by ${label}`}
           >
             {label}
           </Button>

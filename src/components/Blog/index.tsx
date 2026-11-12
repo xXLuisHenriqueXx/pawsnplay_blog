@@ -8,7 +8,7 @@ import { BLOG_CONTENT } from "@/static/data/BlogContent";
 const Blog = () => {
   const { title, articles, image } = BLOG_CONTENT;
   return (
-    <Section id="blog" className="items-center bg-foreground/5">
+    <Section id="blog" aria-label="Blog" className="items-center bg-foreground/5">
       <div className="flex flex-col gap-y-4 max-w-7xl">
         <div className="flex flex-row gap-x-4 items-center justify-between">
           <Header title={title} />
@@ -16,6 +16,7 @@ const Blog = () => {
           <Button
             className="px-16 border-foreground text-foreground hover:bg-foreground hover:text-background"
             variant="outline"
+            aria-label="See all blog articles"
           >
             See All
           </Button>
@@ -25,7 +26,11 @@ const Blog = () => {
           <img
             className="hidden xl:block flex-1 max-w-xl object-cover"
             src={image}
-            alt="Blog"
+            alt="Pet care and activity insights"
+            width={1000}
+            height={1067}
+            loading="lazy"
+            decoding="async"
           />
 
           <ArticleList items={articles} />

@@ -12,10 +12,14 @@ const MemberCard = ({ data }: Props) => {
         className="min-w-full aspect-square object-cover rounded-4xl"
         src={data.image}
         alt={data.name}
+        width={560}
+        height={560}
+        loading="lazy"
+        decoding="async"
       />
       <div className="flex flex-col gap-y-4 p-4 w-full">
         <div>
-          <h2 className="font-semibold">{data.name}</h2>
+          <h3 className="font-semibold">{data.name}</h3>
           <p className="text-sm text-foreground-secondary">{data.role}</p>
         </div>
 

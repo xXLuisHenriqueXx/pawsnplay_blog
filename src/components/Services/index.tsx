@@ -8,10 +8,10 @@ const Services = () => {
   const { title, items } = SERVICES_CONTENT;
 
   return (
-    <Section id="services" className="max-w-7xl mx-auto">
+    <Section id="services" aria-label="Services" className="max-w-7xl mx-auto">
       <Header title={title} />
 
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
+      <ul className="grid grid-cols-2 lg:grid-cols-3 gap-2">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
 
@@ -27,7 +27,7 @@ const Services = () => {
             />
           );
         })}
-      </div>
+      </ul>
     </Section>
   );
 };

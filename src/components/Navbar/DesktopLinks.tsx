@@ -11,7 +11,12 @@ const DesktopLinks = ({ items }: Props) => {
     <ul className="hidden md:flex flex-row items-center gap-0.5 p-2 bg-foreground/75 backdrop-blur-lg rounded-full">
       {items.map(({ id, text, action }) => (
         <li key={id}>
-          <Button className="hover:text-info" variant="ghost" onClick={action}>
+          <Button
+            className="hover:text-info"
+            variant="ghost"
+            onClick={action}
+            aria-label={`Navigate to ${text}`}
+          >
             {text}
           </Button>
         </li>

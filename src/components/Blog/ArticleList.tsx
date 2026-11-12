@@ -14,11 +14,15 @@ const ArticleList = ({ items }: Props) => {
       {items.map(({ id, title, text }, index) => (
         <Fragment key={id}>
           <li className="flex flex-col gap-y-2">
-            <h4 className="text-lg font-bold">{title}</h4>
+            <h3 className="text-lg font-bold">{title}</h3>
             <p className="text-foreground-secondary indent-8">{text}</p>
           </li>
 
-          {index !== items.length - 1 && <Separator />}
+          {index !== items.length - 1 && (
+            <li role="presentation" aria-hidden="true" className="list-none">
+              <Separator />
+            </li>
+          )}
         </Fragment>
       ))}
     </ul>
