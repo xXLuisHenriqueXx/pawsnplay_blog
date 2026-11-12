@@ -1,4 +1,4 @@
-import Video from "@/assets/about/about_video.png";
+import Video from "@/assets/about/about_video.webp";
 
 export interface BlogContentArticle {
   id: string;

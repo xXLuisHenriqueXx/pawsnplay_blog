@@ -1,7 +1,7 @@
-import Olivia from "@/assets/team/olivia.png";
-import Phoenix from "@/assets/team/phoenix.png";
-import Lana from "@/assets/team/lana.png";
-import Demi from "@/assets/team/demi.png";
+import Olivia from "@/assets/team/olivia.webp";
+import Phoenix from "@/assets/team/phoenix.webp";
+import Lana from "@/assets/team/lana.webp";
+import Demi from "@/assets/team/demi.webp";
 
 export interface TeamContentMember {
   id: string;

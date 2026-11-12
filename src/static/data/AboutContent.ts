@@ -1,4 +1,4 @@
-import Cats from "@/assets/about/cats_about.png";
+import Cats from "@/assets/about/cats_about.webp";
 
 interface AboutContent {
   title: string;

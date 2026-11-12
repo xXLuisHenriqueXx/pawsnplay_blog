@@ -1,8 +1,8 @@
-import Grooming from "@/assets/services/grooming.png";
-import Boarding from "@/assets/services/boarding.png";
-import Training from "@/assets/services/training.png";
-import Veterinary from "@/assets/services/veterinary.png";
-import Adoption from "@/assets/services/adoption.png";
+import Grooming from "@/assets/services/grooming.webp";
+import Boarding from "@/assets/services/boarding.webp";
+import Training from "@/assets/services/training.webp";
+import Veterinary from "@/assets/services/veterinary.webp";
+import Adoption from "@/assets/services/adoption.webp";
 
 export interface ServicesContentItem {
   id: string;
